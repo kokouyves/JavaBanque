@@ -1,0 +1,78 @@
+
+package banque;
+
+/**
+ *
+ * @author Yves
+ */
+public class Epargne {
+    private String proprietaire ;
+    private String nom ;
+    private double solde ;
+    private String type ;
+    private double montant ;
+    private final Compte p ;
+        public Epargne(String proprietaire , String nom , String type, Compte p ,double solde ,double montant )
+    {       
+
+        this.proprietaire = proprietaire ;
+        this.nom = nom ;
+        this.type = type ;
+        this.solde = solde ;
+        this.montant = montant ;
+        this.p = p ;
+    }
+
+   
+        public Epargne copie(){
+        Epargne m = new Epargne( proprietaire, nom,type ,p, solde ,montant  ) ;
+        return m ;
+    }
+
+        public void setproprietaire(String proprietaire){
+            this.proprietaire = proprietaire ;
+        }
+         public void setnom(String nom){
+            this.nom = nom ;
+        }
+         public void settype(String type){
+            this.type = type ;
+        }
+         public String getproprietaire(){
+             return proprietaire ;        
+         }
+         
+         public String gettype(){
+             return type ;        
+         }
+          public double getSolde() {
+        return solde;
+    }
+    
+       public void setmontant(double montant){
+         this.montant =montant ;
+     }
+        public double montant(){
+          return montant ;
+      }
+   
+         
+    public void setSolde(double solde) {
+        this.solde = solde;
+    }
+    
+         public void affiche(String proprietaire , String nom , String type){
+             System.out.println("Je me nomme"+proprietaire+"j ai un compte a la banque"+nom+"de type"+type);
+         }
+         public void affiche(String proprietaire , String nom ){
+             System.out.println("Je me presente sous le nom de"+proprietaire+"ayant un compte"+nom+"de type"+type);
+         }
+     public double depot(){
+         return (this.solde+this.montant);
+     }    
+     public void retrait()
+     {
+         System.out.println("notre resultat est"+(this.solde-this.montant));
+     }    
+   
+}
