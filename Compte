@@ -1,0 +1,30 @@
+
+package banque;
+
+/**
+ *
+ * @author Yves
+ */
+public class Compte {
+    private double numero ;
+     private double Compte ;
+
+   public Compte( double numero) {
+           this.numero = numero;
+      
+   }
+
+   
+    public double getNumero() 
+    {
+        return numero;
+    }
+
+    public void setNumero(double numero) {
+        this.numero = numero;
+    }
+
+   public void afficher(){
+        System.out.println(" numero = "+numero);
+        }
+    }
