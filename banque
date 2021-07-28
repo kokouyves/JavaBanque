@@ -1,0 +1,45 @@
+
+package banque;
+import java.util.*;
+
+/**
+ *
+ * @author Yves
+ */
+public class Banque {
+//    String proprietaire ;
+//    String nom  ;
+//    double solde ;
+//    String type ;
+//    double montant ;
+//    
+    public static void main(String[] args) {
+       Compte p = new Compte( 45); 
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Entrer votre numero");
+       double num = sc.nextDouble();
+        Scanner s = new Scanner(System.in);
+    System.out.println("Entre le nom de la banque");
+    String nom = s.nextLine();
+    System.out.println("Entrer votre solde actuel");
+    double solde = sc.nextDouble();
+    System.out.println("Entrer le type de banque");
+    String type = s.nextLine();
+    System.out.println("Entrer le montant depodes ou retirer");
+    double montant = sc.nextDouble();
+    p.setNumero(num);
+    p.afficher();
+   Epargne E1= new Epargne( "proprietaire", nom,type ,p, solde ,montant  ) ;
+     E1.setSolde(solde);
+     E1.setnom(nom);
+     E1.settype(type);
+     E1.setproprietaire(type);
+     E1.setmontant(montant);
+     
+        
+             
+       
+       
+    }
+    
+}
